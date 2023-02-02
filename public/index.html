@@ -27,9 +27,10 @@
     <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css"/>
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/eventhandler.js"></script>
   </head>
 
   <body>
@@ -58,7 +59,7 @@
     <!-- Page-specific (main) content here -->
     <main class="tweet-body">
       <section class="new-tweet">
-        <form method='POST' action="/tweets">
+        <form id='tweet-form'  method='POST' action="/tweets">
           <textarea 
           name="text" 
           placeholder='What are you humming about?' 
@@ -69,32 +70,7 @@
           </div>
         </form>
         <div class="tweet-container">
-          <article class="tweet">
-            <header>
-              <span>
-                <icon class="fa-regular fa-face-laugh-beam"></icon>
-                <h3>Denny</h3>
-              </span>
-              <span class="username">
-                <h3>@dennyd333</h3>
-              </span>
-            </header>
-            <section>
-              <p>Discover new adventures, meet interesting people, and broaden your horizons. Life is an exciting journey, embrace it fully!</p>
-            </section>
-            <footer>
-              <div>
-                <span>10 days ago</span>
-              </div>
-              <div>
-              <socials>
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-retweet"></i>
-                <i class="fa-solid fa-heart"></i>
-              </socials>
-            </div>
-            </footer>
-          </article>
+        
         </div>
       </section>
     </main>
