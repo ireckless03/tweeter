@@ -59,7 +59,7 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     for (const twit of tweets) {
       const $tweet = createTweetElement(twit);
-      $(".tweet-container").append($tweet);
+      $(".tweet-container").prepend($tweet);
     }
   };
 // takes tweets from database and posts on the page
@@ -71,7 +71,6 @@ $(document).ready(function () {
       renderTweets(tweets);
     });
   };
-  
   $('form').on('submit', function(event){
     loadTweets();
   })
