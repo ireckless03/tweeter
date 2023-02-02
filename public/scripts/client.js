@@ -5,12 +5,12 @@
  *
  *
  *
- * IN Tweet Object
- * OUT: return $tweet to the caller
+ * 
  */
 
 $(document).ready(function () {
   // function to turn unix time stamp into time since
+
   function formatDaysAgo(timestamp) {
     const now = Date.now();
     const diff = now - timestamp;
@@ -62,7 +62,7 @@ $(document).ready(function () {
       $(".tweet-container").append($tweet);
     }
   };
-
+// takes tweets from database and posts on the page
   const loadTweets = () => {
     $.ajax("/tweets", {
       dataType: "JSON",
@@ -71,5 +71,9 @@ $(document).ready(function () {
       renderTweets(tweets);
     });
   };
+  
+  $('form').on('submit', function(event){
+    loadTweets();
+  })
   loadTweets();
 });
