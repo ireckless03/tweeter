@@ -1,0 +1,36 @@
+textarea {
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  font-weight: 700;
+  border-bottom: 3px solid #333;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  outline: none;
+}
+
+button {
+  font-size: smaller;
+  font-family: 'Bungee';
+  margin-top: 1%;
+  border-style: inset;
+  color:aliceblue ;
+  background-color: royalblue;
+}
+
+.counter {
+  font-family: 'Bungee';
+  font-weight: 300;
+  justify-content: flex-end;
+}
+
+.red-counter {
+  color: red;
+}
+
+.tweet-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -10,15 +10,35 @@ html {
   box-sizing: inherit;
 }
 
+.nav-icon {
+  font-family: 'Bungee', cursive;
+}
+
+
+.write-a-tweet {
+  font-family: sans-serif;
+}
 /*
  * Global layout stuff
  */
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url(https://www.transparenttextures.com/patterns/smooth-wall-light.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover 100%
 }
+
+.tweet-body{
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: block
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
