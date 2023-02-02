@@ -71,8 +71,11 @@ $(document).ready(function () {
       renderTweets(tweets);
     });
   };
+
   $('form').on('submit', function(event){
+    event.preventDefault();
     loadTweets();
   })
+
   loadTweets();
 });
