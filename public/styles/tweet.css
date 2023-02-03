@@ -10,6 +10,55 @@ textarea {
   outline: none;
 }
 
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  color: #ff0000;
+  font-size: 0.75em;
+  font-weight: 100;
+}
+
+#empty {
+  display: none;
+  width: 100%;
+  border-color: #ff0000;
+  border-style: ridge;
+  text-align: center;
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+}
+
+
+#too-long {
+  display: none;
+  width: 100%;
+  border-color: #ff0000;
+  border-style: ridge;
+  text-align: center;
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+}
+
+#triangle1 {
+  margin-right: 31%;
+}
+
+#triangle2 {
+  margin-left: 31%;
+}
+
+#triangle3 {
+  margin-right: 17%;
+}
+
+#triangle4 {
+  margin-left: 17%;
+}
+
+
+
 button {
   font-size: smaller;
   font-family: 'Bungee';

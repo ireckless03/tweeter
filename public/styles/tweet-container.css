@@ -1,24 +1,19 @@
 
-div.tweet-container {
-  display: flex;
-  width: 100%;
+.tweet {
 
+  width: 100%;
   margin-top: 5%;
   border-style: groove;
   border-color: darkgray;
   border-width: 5px;
 }
 
-.tweet {
-  display: flex;
-  flex-direction: column;
-}
 
 .tweet > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   margin-top: 0px;
   height: min-content;
   font-family: Arial, Helvetica, sans-serif;
@@ -41,8 +36,8 @@ div.tweet-container {
   font-size: 0.8em;
 }
 
-i {
-  margin-left: 10px;
+.tweet-icon {
+  width: 50px;
   margin-right: 10px;
 }
 

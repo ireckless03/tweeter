@@ -9,6 +9,12 @@
  */
 
 $(document).ready(function () {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   // function to turn unix time stamp into time since
 
   function formatDaysAgo(timestamp) {
@@ -36,7 +42,7 @@ $(document).ready(function () {
         </span>
       </header>
       <section>
-        <p>${tweetData.content.text}</p>
+        <p> ${escape(tweetData.content.text)}</p>
       </section>
       <footer>
         <div>
@@ -74,7 +80,21 @@ $(document).ready(function () {
 
   $('form').on('submit', function(event){
     event.preventDefault();
-    loadTweets();
+    const tweet = $('#tweet-text').val().length;
+    if (!tweet) {
+      $('#empty').slideToggle('slow')
+    } else if (tweet > 140) {
+      $('#too-long').slideToggle('slow')
+    } else {
+      const formData = $(this).serialize();
+      $.ajax({
+        url: "/tweets",
+        type: "POST",
+        data: formData,
+      })
+      .then(loadTweets());
+    }
+    
   })
 
   loadTweets();
