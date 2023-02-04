@@ -36,10 +36,82 @@ body {
   height: 100%;
   margin-left: 5%;
   margin-right: 5%;
-  display: block
+  display: block;
+  word-wrap: break-word;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    width : 50%;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .content {
+    display: flex;
+    align-content: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet-body {
+    width: 50%;
+    margin-top: 15%;
+    word-wrap: break-word;
+  }
 }
 
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    margin-top: 20%;
+  }
+  .tweet-body {
+    width: auto;
+    margin-top: auto;
+  }
+
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    width: 50%;
+    margin-top: 130px;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+  .tweet-body {
+    width: 50%;
+    margin-top: 150px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 767px)  {
+  .header {
+    margin-top: 130px;
+  }
+  .tweet-body {
+    width: auto;
+    margin-top: auto;
+  }
+
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .error-container {
+    
+  }
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

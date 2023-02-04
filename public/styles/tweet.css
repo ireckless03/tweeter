@@ -41,21 +41,6 @@ textarea {
   margin-bottom: 1.5px;
 }
 
-#triangle1 {
-  margin-right: 31%;
-}
-
-#triangle2 {
-  margin-left: 31%;
-}
-
-#triangle3 {
-  margin-right: 17%;
-}
-
-#triangle4 {
-  margin-left: 17%;
-}
 
 
 
@@ -83,3 +68,6 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
+
+

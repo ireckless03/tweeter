@@ -82,10 +82,14 @@ $(document).ready(function () {
     event.preventDefault();
     const tweet = $('#tweet-text').val().length;
     if (!tweet) {
-      $('#empty').slideToggle('slow')
+      $('#too-long').slideUp('slow')
+      $('#empty').slideDown('slow')
     } else if (tweet > 140) {
-      $('#too-long').slideToggle('slow')
+      $('#empty').slideUp('slow')
+      $('#too-long').slideDown('slow')
     } else {
+      $('#too-long').slideUp('slow')
+      $('#empty').slideUp('slow')
       const formData = $(this).serialize();
       $.ajax({
         url: "/tweets",
@@ -99,3 +103,5 @@ $(document).ready(function () {
 
   loadTweets();
 });
+
+
