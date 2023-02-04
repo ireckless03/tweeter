@@ -18,5 +18,5 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-![Capture1](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.48.24%20PM.png)
-![Capture2](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.48.33%20PM.png)
+![Capture1](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.58.07%20PM.png)
+![Capture2](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.57.57%20PM.png)
