@@ -19,4 +19,4 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 ![Capture1](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.48.24%20PM.png)
-![Capture2](public/images/Screenshot 2023-02-04 at 1.48.33 PM.png)
+![Capture2](https://github.com/ireckless03/tweeter/blob/master/public/images/Screenshot%202023-02-04%20at%201.48.33%20PM.png)
