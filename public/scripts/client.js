@@ -77,7 +77,7 @@ $(document).ready(function () {
       renderTweets(tweets);
     });
   };
-
+// ensures correct input before adding to tweet database, also shows appriopriate errors
   $('form').on('submit', function(event){
     event.preventDefault();
     const tweet = $('#tweet-text').val().length;

@@ -18,9 +18,7 @@ html {
 .write-a-tweet {
   font-family: sans-serif;
 }
-/*
- * Global layout stuff
- */
+
 
 body {
   color: #545149;
@@ -107,8 +105,4 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+}

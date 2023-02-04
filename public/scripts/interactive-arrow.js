@@ -1,3 +1,5 @@
+// made Write A Tweet header to focus on the tweet submission box
+// if user is somewhere else on screen it should bring them back to the submission box
 $(document).ready(function() {
   $('.write-a-tweet').click(function() {
     let $tweetForm = $("#tweet-form");

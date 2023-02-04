@@ -1,3 +1,4 @@
+// character counter on page will turn red if input is over max length
 $(document).ready(function () {
   $("#tweet-text").on("input",function () {
     const MAX_CHAR = 140;
