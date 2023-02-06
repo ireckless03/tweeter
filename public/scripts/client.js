@@ -8,9 +8,8 @@
  *
  */
 
-$(document).ready(function() {
-
-  const escape = function(str) {
+$(document).ready(function () {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -62,8 +61,8 @@ $(document).ready(function() {
   };
 
   // loops through all the tweets and appends to the tweets container
-  const renderTweets = function(tweets) {
-    $('.tweet-container').empty();
+  const renderTweets = function (tweets) {
+    $(".tweet-container").empty();
     for (const twit of tweets) {
       const $tweet = createTweetElement(twit);
       $(".tweet-container").prepend($tweet);
@@ -79,35 +78,34 @@ $(document).ready(function() {
     });
   };
   // ensures correct input before adding to tweet database, also shows appriopriate errors
-  $('form').on('submit', function(event) {
+  $("form").on("submit", function (event) {
     event.preventDefault();
-    const tweet = $('#tweet-text').val().length;
+    const tweet = $("#tweet-text").val().length;
     if (!tweet) {
-      $('#too-long').slideUp('slow');
-      $('#empty').slideDown('slow');
+      $("#too-long").slideUp("slow");
+      $("#empty").slideDown("slow");
     } else if (tweet > 140) {
-      $('#empty').slideUp('slow');
-      $('#too-long').slideDown('slow');
+      $("#empty").slideUp("slow");
+      $("#too-long").slideDown("slow");
     } else {
-      $('#too-long').slideUp('slow');
-      $('#empty').slideUp('slow');
+      $("#too-long").slideUp("slow");
+      $("#empty").slideUp("slow");
       const formData = $(this).serialize();
       $.ajax({
         url: "/tweets",
         type: "POST",
         data: formData,
       })
-        .then(() => { // when using then start with arrow function if it does more
+        .then(() => {
+          // when using then start with arrow function if it does more
           loadTweets();
           $("#tweet-text").val("");
-          $('.counter').val(140);
+          $(".counter").val(140);
         })
         .catch((err) => {
-          alert('Error',err);
+          alert("Error", err);
         });
     }
   });
   loadTweets();
 });
-
-
