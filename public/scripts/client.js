@@ -5,12 +5,12 @@
  *
  *
  *
- * 
+ *
  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -62,13 +62,14 @@ $(document).ready(function () {
   };
 
   // loops through all the tweets and appends to the tweets container
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
+    $('.tweet-container').empty();
     for (const twit of tweets) {
       const $tweet = createTweetElement(twit);
       $(".tweet-container").prepend($tweet);
     }
   };
-// takes tweets from database and posts on the page
+  // takes tweets from database and posts on the page
   const loadTweets = () => {
     $.ajax("/tweets", {
       dataType: "JSON",
@@ -77,8 +78,8 @@ $(document).ready(function () {
       renderTweets(tweets);
     });
   };
-// ensures correct input before adding to tweet database, also shows appriopriate errors
-  $('form').on('submit', function(event){
+  // ensures correct input before adding to tweet database, also shows appriopriate errors
+  $('form').on('submit', function(event) {
     event.preventDefault();
     const tweet = $('#tweet-text').val().length;
     if (!tweet) {
@@ -96,10 +97,16 @@ $(document).ready(function () {
         type: "POST",
         data: formData,
       })
-      .then(loadTweets());
-      $("#tweet-text").val("");
+        .then(() => { // when using then start with arrow function if it does more
+          loadTweets();
+          $("#tweet-text").val("");
+          $('.counter').val(140);
+        })
+        .catch((err) => {
+          alert('Error',err);
+        });
     }
-  })
+  });
   loadTweets();
 });
 
